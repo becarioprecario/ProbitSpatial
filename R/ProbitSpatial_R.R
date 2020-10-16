@@ -171,7 +171,7 @@ return(ME)
 
 fitted.SpatialProbit<-function(object,type="link",cut=0.5,...) 
 {
-type <- match.arg(type, c("link", "response", "binary")
+type <- match.arg(type, c("link", "response", "binary"))
 if (object@DGP == "SAR"){ 
 	iW <- ApproxiW(object@W,object@rho,object@iW_CL)
     f <- iW %*% (object@X %*% object@beta)
